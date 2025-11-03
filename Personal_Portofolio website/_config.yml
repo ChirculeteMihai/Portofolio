@@ -1,0 +1,17 @@
+# GitHub Pages configuration
+# For a user/organization site (username.github.io), leave baseurl empty.
+# For a project site, set baseurl to the repo name, like "/personal-portfolio".
+
+title: Your Name · Portfolio
+description: Personal portfolio website of Your Name: projects, experience, and contact.
+theme: null
+plugins: []
+markdown: kramdown
+permalink: pretty
+baseurl: ""
+url: "https://your-username.github.io"
+
+# Exclude local/dev files if added later
+exclude:
+  - node_modules
+  - README.md
