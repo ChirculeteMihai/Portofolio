@@ -83,6 +83,12 @@ p { color: var(--text); margin: 0 0 1rem; }
 .cert-list .card-actions { margin-top: .5rem; flex-wrap: wrap; }
 .cert-list a { word-break: break-word; overflow-wrap: anywhere; }
 
+/* Education layout */
+.edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (max-width: 760px) { .edu-grid { grid-template-columns: 1fr; } }
+.col-span-2 { grid-column: 1 / -1; }
+.card-lg .card-body { padding: 1.25rem; }
+
 /* Chips */
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
 .chip { display: inline-block; background: var(--bg-elev); border: 1px solid var(--border); color: var(--muted); padding: .25rem .5rem; border-radius: 999px; font-size: .9rem; }
