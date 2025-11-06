@@ -75,7 +75,7 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 1rem; }
 /* Hero image: smaller and aligned left */
 .hero-image {
   display: block;           /* ignore parent text-align */
-  width: clamp(140px, 24vw, 240px);
+  width: clamp(280px, 48vw, 480px); 
   height: auto;
   margin: .75rem auto 0;    /* center */
   border: 1px solid var(--blue-3);
