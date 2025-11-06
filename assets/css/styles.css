@@ -13,7 +13,7 @@
   /* Mapped accents */
   --accent: var(--teal-2);
   --accent-600: var(--teal-1);
-  --border: #1f2747;
+  --border: #2a4d4a; /* teal-tinted border */
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -46,14 +46,15 @@ p { color: var(--text); margin: 0 0 1rem; }
 /* Header */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(11,16,32,.7); backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(0,150,136,0.12); /* teal glaze */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--teal-3);
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; }
 .brand { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; color: var(--text); font-weight: 600; }
 .brand-mark { color: var(--accent); }
 .nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0; }
-.nav a { color: var(--muted); text-decoration: none; padding: .5rem .25rem; border-radius: .25rem; }
+.nav a { color: var(--teal-5); text-decoration: none; padding: .5rem .25rem; border-radius: .25rem; }
 .nav a:hover, .nav a:focus { color: var(--text); }
 
 /* Mobile nav */
@@ -62,6 +63,7 @@ p { color: var(--text); margin: 0 0 1rem; }
 @media (max-width: 760px) {
   .nav-toggle { display: inline-block; }
   .nav { position: absolute; inset: 60px 0 auto 0; background: var(--bg); border-bottom: 1px solid var(--border); display: none; }
+  .nav { border-bottom-color: var(--teal-3); }
   .nav.open { display: block; }
   .nav ul { flex-direction: column; gap: .5rem; padding: .75rem 1rem 1rem; }
 }
@@ -70,7 +72,7 @@ p { color: var(--text); margin: 0 0 1rem; }
 .hero-inner { text-align: center; }
 .actions { display: inline-flex; gap: .75rem; margin-top: 1.25rem; }
 
-.btn { display: inline-block; color: var(--text); background: transparent; border: 1px solid var(--border); padding: .6rem .95rem; border-radius: .5rem; text-decoration: none; transition: background .2s ease, border-color .2s ease; }
+.btn { display: inline-block; color: var(--text); background: transparent; border: 1px solid var(--teal-3); padding: .6rem .95rem; border-radius: .5rem; text-decoration: none; transition: background .2s ease, border-color .2s ease; }
 .btn:hover, .btn:focus { border-color: var(--accent); }
 .btn-accent { background: var(--accent); color: #001522; border-color: var(--accent-600); box-shadow: var(--shadow); }
 .btn-accent:hover, .btn-accent:focus { background: var(--accent-600); }
@@ -80,7 +82,7 @@ p { color: var(--text); margin: 0 0 1rem; }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 @media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
-.card { background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00)); border: 1px solid var(--border); border-radius: .75rem; box-shadow: var(--shadow); }
+.card { background: linear-gradient(180deg, rgba(101,195,186,0.08), rgba(255,255,255,0.00)); border: 1px solid var(--teal-3); border-radius: .75rem; box-shadow: var(--shadow); }
 .card-body { padding: 1rem; }
 .card-actions { display: flex; gap: .5rem; margin-top: .75rem; }
 
@@ -99,7 +101,7 @@ p { color: var(--text); margin: 0 0 1rem; }
 
 /* Chips */
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
-.chip { display: inline-block; background: var(--bg-elev); border: 1px solid var(--border); color: var(--muted); padding: .25rem .5rem; border-radius: 999px; font-size: .9rem; }
+.chip { display: inline-block; background: #83d0c91a; border: 1px solid var(--teal-4); color: var(--text); padding: .25rem .5rem; border-radius: 999px; font-size: .9rem; }
 
 /* Contact */
 .contact-list { list-style: none; padding: 0; margin: .5rem 0 0; }
@@ -107,7 +109,11 @@ p { color: var(--text); margin: 0 0 1rem; }
 .contact-list a:hover, .contact-list a:focus { text-decoration: underline; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--border); padding: 2rem 0; color: var(--muted); }
+.site-footer { border-top: 1px solid var(--teal-3); padding: 2rem 0; color: var(--muted); }
+
+/* Accessibility & polish */
+:focus-visible { outline: 2px solid var(--teal-3); outline-offset: 2px; }
+::selection { background: var(--teal-4); color: #001c1a; }
 
 /* 404 page */
 .center { min-height: calc(100vh - 140px); display: grid; place-items: center; text-align: center; }
