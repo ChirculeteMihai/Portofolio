@@ -1,9 +1,9 @@
 /* Theme tokens */
 :root {
-  --bg: #0b1020;
-  --bg-elev: #111733;
+  --bg: #0096880;
+  --bg-elev: #35a79;
   --text: #e6eaf2;
-  --muted: #9aa3b2;
+  --muted: #83d0c9;
   /* Palette */
   --teal-1: #009688; /* dark accent */
   --teal-2: #35a79c;
